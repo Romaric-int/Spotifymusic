@@ -2,9 +2,10 @@
 <nav>
   <ul>
     <li><a href="/">Home</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/article/1">Article 1</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="/about">Parcourir</a></li>
+    <li><a href="/Tendance">Tendance</a></li>
+    <li><a href="/Playlist">Mes playlist</a></li>
+    <li><a href="/Contact">Contact</a></li>
     @guest
         @if (Route::has('login'))
             <li class="nav-item">
@@ -36,15 +37,15 @@
             </div>
         </li>
     @endguest
-  </ul>
+    </ul>
 
-  <audio controls id="audio">
+
 
 </nav>
 
 <div class="">
   @yield('content')
 </div>
-
+<audio controls id="audio">
 <script src="/js/jquery.js"></script>
 <script src="/js/divers.js"></script>

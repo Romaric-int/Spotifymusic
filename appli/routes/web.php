@@ -21,5 +21,11 @@ Route::get('/article/{id}', [FirstController::class, "article"])->where('id', '[
 
 Route::get('/songs/create', [FirstController::class, "create"]);
 Route::post('/songs', [FirstController::class, "store"]);
+Route::get('/rock', [FirstController::class, "rock"]);
+Route::get('/rap', [FirstController::class, "rap"]);
+Route::get('/pop', [FirstController::class, "pop"]);
+Route::get('/electro', [FirstController::class, "electro"]);
+Route::get('/autre', [FirstController::class, "autre"]);
+
 
 Auth::routes();
