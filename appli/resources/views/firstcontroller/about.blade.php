@@ -1,11 +1,18 @@
 @extends('layouts.template')
 
 @section('content')
-<h1>Parcourir</h1>
-<a href="/rock">Rock</a>
-<a href="/rap">Rap</a>
-<a href="/electro">electro</a>
-<a href="/pop">Pop</a>
-<a href="/autre">Autre</a>
+<div class="parcourir">
+  <div class="genre">
+    <a id="genre1" href="/rock">Rock</a>
+    <a id="genre2" href="/rap">Rap</a>
+    <a id="genre3" href="/electro">electro</a>
+    <a id="genre4" href="/pop">Pop</a>
+    <a id="genre5" href="/autre">Autre</a>
+  </div>
+</div>
 
 @endsection
+
+<style media="screen">
+
+</style>
