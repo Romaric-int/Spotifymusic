@@ -2,18 +2,24 @@
 <div class="templategen">
   <nav id="barre">
     <ul class="barregauche">
+      @if(Auth::check())
+        <li><a href="/profil/{{ Auth::user()->id }}">Profil {{ Auth::user()->name }}</a></li>
+      @endif
+      @if(Auth::check() == false)
+      <li class="nav-item">
+          <a class="nav-link" href="{{ route('login') }}">{{ __('Connexion') }}</a>
+      </li>
+      @endif
+
+
       <li><a href="/">Accueil</a></li>
-      <li><a href="/about">Parcourir</a></li>
-      <li><a href="/Tendance">Tendance</a></li>
+      <li><a href="/parcourir">Parcourir</a></li>
+      <li><a href="/tendance">Tendance</a></li>
       <li><a href="/Playlist">Mes playlist</a></li>
       <li><a href="/Contact">Contact</a></li>
       <br><br>
       @guest
-          @if (Route::has('login'))
-              <li class="nav-item">
-                  <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-              </li>
-          @endif
+
 
           @if (Route::has('register'))
               <li class="nav-item">
@@ -21,10 +27,7 @@
               </li>
           @endif
       @else
-          <li class="nav-item dropdown">
-              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                  {{ Auth::user()->name }}
-              </a>
+
 
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="{{ route('logout') }}"

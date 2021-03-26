@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use App\Models\Song;
+use App\Models\User;
 
 class FirstController extends Controller
 {
@@ -59,6 +61,49 @@ class FirstController extends Controller
                                  ->get();
 
       return view("firstcontroller.genre", ["genre" => $genre]);
+    }
+    public function hiphop(){
+      $genre = song::where('genre', 'hiphop')
+                        ->orderBy('artiste')
+
+                                 ->get();
+
+      return view("firstcontroller.genre", ["genre" => $genre]);
+    }
+    public function soiree(){
+      $genre = song::where('genre', 'soiree')
+                        ->orderBy('artiste')
+
+                                 ->get();
+
+      return view("firstcontroller.genre", ["genre" => $genre]);
+    }
+    public function classique(){
+      $genre = song::where('genre', 'classique')
+                        ->orderBy('artiste')
+
+                                 ->get();
+
+      return view("firstcontroller.genre", ["genre" => $genre]);
+    }
+
+    public function tendance(){
+      return view("firstcontroller.tendance");
+    }
+
+    public function contact(){
+      return view("firstcontroller.contact");
+    }
+
+    public function playlist(){
+      return view("firstcontroller.playlist");
+    }
+
+    public function profil($id){
+      $profil = User::findOrFail($id);
+      $data = User::where('id',$id)
+                                  ->get();
+      return view("firstcontroller.profil", ["data" => $data]);
     }
 
 

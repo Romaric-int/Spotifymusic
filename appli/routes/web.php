@@ -15,9 +15,9 @@ use App\Http\Controllers\FirstController;
 
 Route::get('/', [FirstController::class, "index"]);
 
-Route::get('/about', [FirstController::class, "about"]);
+Route::get('/parcourir', [FirstController::class, "about"]);
 
-Route::get('/article/{id}', [FirstController::class, "article"])->where('id', '[0-9]+');
+
 
 Route::get('/songs/create', [FirstController::class, "create"]);
 Route::post('/songs', [FirstController::class, "store"]);
@@ -25,7 +25,14 @@ Route::get('/rock', [FirstController::class, "rock"]);
 Route::get('/rap', [FirstController::class, "rap"]);
 Route::get('/pop', [FirstController::class, "pop"]);
 Route::get('/electro', [FirstController::class, "electro"]);
+Route::get('/Soirée', [FirstController::class, "soiree"]);
+Route::get('/Hip-Hop', [FirstController::class, "hiphop"]);
+Route::get('/Classique', [FirstController::class, "classique"]);
 Route::get('/autre', [FirstController::class, "autre"]);
+Route::get('/tendance', [FirstController::class, "tendance"]);
+Route::get('/Contact', [FirstController::class, "contact"]);
+Route::get('/profil/{id}', [FirstController::class, 'profil']);
+Route::get('/Playlist', [FirstController::class, "playlist"]);
 
 
 Auth::routes();

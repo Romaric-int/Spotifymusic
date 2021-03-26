@@ -19,6 +19,8 @@ class CreateSongsTable extends Migration
              $table->string('genre', 255);
              $table->string('artiste', 255);
              $table->string('année', 255);
+             $table->string('image', 255);
+
              $table->integer('votes');
              $table->timestamps();
          });

@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
              'genre' => 'rap',
              'artiste' => "Kaaris",
              'année' => "20XX",
+             'image' => "/img/kaaris.jpg",
              'votes' => 90000
          ]);
 
@@ -31,6 +32,7 @@ class DatabaseSeeder extends Seeder
              'genre' => 'rap',
              'artiste' => "Alkapote",
              'année' => "2019",
+             'image' => "/img/alkapote.jpg",
              'votes' => 8000
          ]);
 
@@ -40,6 +42,7 @@ class DatabaseSeeder extends Seeder
              'genre' => 'rock',
              'artiste' => "Nirvana",
              'année' => "1991",
+             'image' => "/img/nirvana.jpg",
              'votes' => 10050
          ]);
 
@@ -49,7 +52,14 @@ class DatabaseSeeder extends Seeder
              'genre' => 'rock',
              'artiste' => "Queen",
              'année' => "1975",
+             'image' => "/img/queen.jpg",
              'votes' => 800
+         ]);
+         DB::table('users')->insert([
+             'name' => 'Kaaris',
+             'email' => 'kaaris@oui.com',
+             'password' => '$2y$10$OKPtrmnFwAWDtAg80TBeiuWV86djwinRX7VHZBjLCoYS4HZrmxB7q',
+             'avatar' => '/img/avatar/default.jpg'
          ]);
      }
 }
