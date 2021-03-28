@@ -15,8 +15,9 @@
               <br>
                 <input type="email" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="email" autofocus>
                 @error('email')
+                <br>
                     <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
+                        <strong class="message">{{ $message }}</strong>
                     </span>
                 @enderror
 
@@ -25,7 +26,7 @@
                 <input type="password" name="password" required autocomplete="current-password" placeholder="mot de passe">
                 @error('password')
                     <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
+                        <strong class="message">{{ $message }}</strong>
                     </span>
                 @enderror
 
@@ -56,6 +57,12 @@
     margin: 0 auto;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+  }
+
+  .message {
+    font-size: 0.7rem;
+    font-weight: normal;
+    color: red;
   }
 
   input {
