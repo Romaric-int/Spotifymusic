@@ -40,4 +40,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function Like() {
+      return $this->belongsToMany('App\Models\Song','fav','user_id','song_id');
+    }
+
+
 }

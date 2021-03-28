@@ -3,76 +3,48 @@
 @section('content')
 
 
-<!-- <ul>
-  @foreach($songs as $s )
-            <li><a href="#" data-file="{{$s->url}}" class="song">{{ $s->title }}</a> aimé par {{$s->votes}} personnes</li>
-        @endforeach
-</ul> -->
-
 <div class="accueil">
 
   <div id="playlist">
-    <a href="#" class="play1">
+    <a href="/MesLikes" class="play1">
       <div class="imgplay">
       </div>
-      <p class="textplay">playlist1</p>
+      <p class="textplay">MesLikes</p>
     </a>
 
-    <a href="#" class="play2">
-      <div class="imgplay">
-      </div>
-      <p class="textplay">playlist1</p>
-    </a>
+
 
   </div>
 
   <div id="artiste">
+    @foreach($data as $s)
 
-    <a href="#" class="art">
+    <a href="/artiste/{{$s->id}}" class="art">
       <div class="imgart">
-        <img src="../../../img/123.jpg" alt="">
+        <img src="{{$s->image}}" alt="">
       </div>
-      <p >artiste1</p>
+      <p >{{$s->name}}</p>
     </a>
 
-    <a href="#" class="art">
-      <div class="imgart">
-        <img src="../../../img/123.jpg" alt="">
-      </div>
-      <p>artiste1</p>
-    </a>
+    @endforeach
 
-    <a href="#" class="art">
-      <div class="imgart">
-        <img src="../../../img/123.jpg" alt="">
-      </div>
-      <p>artiste1</p>
-    </a>
 
-    <a href="#" class="art">
-      <div class="imgart">
-        <img src="../../../img/123.jpg" alt="">
-      </div>
-      <p>artiste1</p>
-    </a>
 
   </div>
   <div id="tendance">
 
     <h1>Tendances</h1>
+    @foreach($data2 as $s )
 
-    <div class="tend">
-      <img src="../../../img/123.jpg" alt="">
-      <p>musique 1</p>
-    </div>
-    <div class="tend">
-      <img src="../../../img/123.jpg" alt="">
-      <p>musique 2</p>
-    </div>
-    <div class="tend">
-      <img src="../../../img/123.jpg" alt="">
-      <p>musique 3</p>
-    </div>
+
+      <div class="tend">
+        <a href="#" data-file="{{$s->url}}" class="btn-song btn-song{{$s->id}}"><img src="{{$s->image}}" alt=""></a>
+        <p>{{$s->title}}</p>
+
+      </div>
+          @endforeach
+
+
 
   </div>
 </div>

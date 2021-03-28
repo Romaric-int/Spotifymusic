@@ -15,8 +15,11 @@
       <li><a href="/">Accueil</a></li>
       <li><a href="/parcourir">Parcourir</a></li>
       <li><a href="/tendance">Tendance</a></li>
-      <li><a href="/Playlist">Mes playlist</a></li>
+      <li><a href="/MesLikes">Mes Likes</a></li>
       <li><a href="/Contact">Contact</a></li>
+      @if(Auth::check())
+        <li><a href="/create">Upload</a></li>
+      @endif
       <br><br>
       @guest
 

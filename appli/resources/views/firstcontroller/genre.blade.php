@@ -9,7 +9,14 @@
         <div class="song{{$s->id}}">
 
 
-          <p><a href="#" data-file="{{$s->url}}" class="btn-song{{$s->id}}">{{ $s->title }}</a> par {{ $s->artiste }} aimé par {{$s->votes}} personnes</p>
+          <p><a href="#" data-file="{{$s->url}}" class="btn-song btn-song{{$s->id}}">{{ $s->title }}</a> par {{ $s->artiste }} aimé par {{$s->votes}} personnes</p>
+          @auth
+            @if(Auth::user()->Like->contains($s->id))
+              <a href="/fav/{{$s->id}}"><img src="/img/icone/favon.png" width="100" height="100" alt=""></a>
+            @else
+            <a href="/fav/{{$s->id}}"><img src="/img/icone/fav.png" width="100" height="100" alt=""></a>
+            @endif
+          @endauth
           </div>
       @endforeach
 @endsection

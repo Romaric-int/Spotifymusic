@@ -31,8 +31,13 @@ Route::get('/Classique', [FirstController::class, "classique"]);
 Route::get('/autre', [FirstController::class, "autre"]);
 Route::get('/tendance', [FirstController::class, "tendance"]);
 Route::get('/Contact', [FirstController::class, "contact"]);
-Route::get('/profil/{id}', [FirstController::class, 'profil']);
-Route::get('/Playlist', [FirstController::class, "playlist"]);
+Route::get('/profil/{id}', [FirstController::class, 'profil'])->where('id','[0-9]+');
+Route::get('/artiste/{id}', [FirstController::class, 'artiste'])->where('id','[0-9]+');
+Route::get('/MesLikes', [FirstController::class, "playlist"]);
+Route::get('/create', [FirstController::class, "create"]);
+
+Route::post('/newsong', [FirstController::class, "newsong"])->middleware('auth');
+Route::get('/fav/{id}', [FirstController::class, "fav"])->middleware('auth')->where('id','[0-9]+');
 
 
 Auth::routes();

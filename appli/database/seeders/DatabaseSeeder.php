@@ -61,5 +61,33 @@ class DatabaseSeeder extends Seeder
              'password' => '$2y$10$OKPtrmnFwAWDtAg80TBeiuWV86djwinRX7VHZBjLCoYS4HZrmxB7q',
              'avatar' => '/img/avatar/default.jpg'
          ]);
+
+         DB::table('artiste')->insert([
+             'name' => 'Freeze Corleone',
+             'image' => "/img/avatar/freeze.png",
+
+         ]);
+         DB::table('artiste')->insert([
+             'name' => 'Kaaris',
+             'image' => "/img/avatar/kaaris.jpg",
+
+         ]);
+         DB::table('artiste')->insert([
+             'name' => 'Alkapote',
+             'image' => "/img/avatar/alkapote.jpg",
+
+         ]);
+
+        
+         DB::table('artiste')->insert([
+             'name' => 'Nirvana',
+             'image' => "/img/avatar/nirvana.jpg",
+
+         ]);
+         DB::table('artiste')->insert([
+             'name' => 'Queen',
+             'image' => "/img/avatar/queen.jpg",
+
+         ]);
      }
 }
