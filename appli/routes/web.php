@@ -30,7 +30,7 @@ Route::get('/Hip-Hop', [FirstController::class, "hiphop"]);
 Route::get('/Classique', [FirstController::class, "classique"]);
 Route::get('/autre', [FirstController::class, "autre"]);
 Route::get('/tendance', [FirstController::class, "tendance"]);
-Route::get('/Contact', [FirstController::class, "contact"]);
+Route::get('/Artistes', [FirstController::class, "contact"]);
 Route::get('/profil/{id}', [FirstController::class, 'profil'])->where('id','[0-9]+');
 Route::get('/artiste/{id}', [FirstController::class, 'artiste'])->where('id','[0-9]+');
 Route::get('/MesLikes', [FirstController::class, "playlist"]);

@@ -10,8 +10,8 @@
 <h1>Ses musiques</h1>
 @foreach ($data as $p)
 <div class="tend">
-  <a href="#" data-file="{{$p->url}}" class="btn-song btn-song{{$p->id}}"><img src="{{$p->image}}" alt=""></a>
-  <p>{{$p->title}}</p>
+  <a href="#" data-file="{{$p->url}}" class="btn-song btn-song{{$p->id}}"><img src="{{$p->image}}" alt=""><p>{{$p->title}}</p></a>
+  
 </div>
 
 

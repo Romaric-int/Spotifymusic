@@ -14,7 +14,7 @@
       <br><br>
       <li><a href="/">Accueil</a></li>
       <li><a href="/parcourir">Parcourir</a></li>
-      <li><a href="/Contact">Artistes</a></li>
+      <li><a href="/Artistes">Artistes</a></li>
       <li><a href="/tendance">Tendance</a></li>
       <li><a href="/MesLikes">Mes Likes</a></li>
 

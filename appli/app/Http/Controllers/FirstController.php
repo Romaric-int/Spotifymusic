@@ -107,7 +107,8 @@ class FirstController extends Controller
     }
 
     public function contact(){
-      return view("firstcontroller.contact");
+      $data = Artiste::all();
+      return view("firstcontroller.contact", ["data" => $data]);
     }
     public function create(){
       return view("firstcontroller.create");
