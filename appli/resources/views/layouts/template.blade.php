@@ -1,4 +1,5 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
+<link rel="stylesheet" href="/css/scss/main.css">
 <div class="templategen">
   <nav id="barre">
     <ul class="barregauche">
@@ -55,70 +56,18 @@
   <audio controls id="audio">
 </div>
 
+<div class="theme-switch">
+    <div class="switch"></div>
+  </div>
+
 <script src="/js/jquery.js"></script>
 <script src="/js/divers.js"></script>
 
 <style media="screen">
-  *{
-    margin: 0 auto;
-    padding: 0;
-    font-family: 'Raleway', sans-serif;
-  }
-  li {
-    list-style-type: none;
-  }
 
-  .templategen {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-color: #EBEBEB;
-    display: grid;
-    grid-template-columns: 0.5fr 3fr;
-    grid-template-rows: 2.8fr 0.2fr;
-    grid-template-areas:  "barre content"
-                          "barre audio";
-  }
 
-  #barre {
-    position: relative;
-    grid-area: barre;
-    background-color: #CBCBCB;
-    width: 100%;
-  }
-  #barre ul {
-    position: relative;
-    top: 20%;
-    left: 20%;
-  }
-  #barre li {
-    margin: 5% 0% 5% 0%;
-  }
-  #barre a {
-    text-decoration: none;
-    color: #616161;
-    font-size: 1.3rem;
-  }
-  #barre a:hover {
-    text-decoration: underline;
-  }
 
-  #content {
-    position: relative;
-    grid-area: content;
-    width: 100%;
-  }
 
-  #audio {
-    position: relative;
-    grid-area: audio;
-    width: 100%;
-    height: 100%;
-  }
 
-  audio::-webkit-media-controls-play-button,
-  audio::-webkit-media-controls-panel {
-  background-color: #ABABAB;
-}
 
 </style>

@@ -6,3 +6,13 @@ $(document).ready(function() {
          audio.play();
     })
 })
+
+$(".theme-switch").on("click", () => {
+  $("body").toggleClass("light-theme");
+});
+$(".theme-switch").on("click", () => {
+  $("#content").toggleClass("light-theme");
+});
+$(".theme-switch").on("click", () => {
+  $("#content").toggleClass("light-theme");
+});

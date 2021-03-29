@@ -1,0 +1,172 @@
+:root {
+  --background: #494341;
+  --text: #FFF;
+  --highlight: #CBCBCB;
+  --white: #FFF;
+  --backgroundBarre: #817F7F;
+}
+
+body {
+  background: var(--background);
+  transition: 0.5s background ease;
+}
+
+#content {
+  background: var(--background);
+  position: relative;
+  grid-area: content;
+  color: var(--text);
+  width: 100%;
+  transition: 0.5s background ease;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.theme-switch {
+  --background: #FFF;
+  --text: #616161;
+  --backgroundBarre: #CBCBCB;
+  color: var(--text);
+  width: 70px;
+  height: 30px;
+  background: var(--highlight);
+  border-radius: 50px;
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+}
+.theme-switch .switch {
+  background: white;
+  width: 24px;
+  height: 24px;
+  background: var(--background);
+  border-radius: 100%;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  transition: 0.5s all ease;
+}
+
+.light-theme {
+  --background: #FFF;
+  --text: #616161;
+  --backgroundBarre: #CBCBCB;
+  background: var(--background);
+}
+.light-theme .theme-switch {
+  background: var(--text);
+}
+.light-theme .theme-switch .switch {
+  transform: translateX(37px);
+}
+.light-theme a {
+  color: var(--text);
+}
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+.templategen {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #EBEBEB;
+  display: grid;
+  grid-template-columns: 0.5fr 3fr;
+  grid-template-rows: 2.8fr 0.2fr;
+  grid-template-areas: "barre content" "barre audio";
+}
+
+.art p {
+  color: var(--text) !important;
+}
+
+#tendance h1 {
+  color: var(--text) !important;
+}
+
+.loginimg {
+  background-color: var(--background);
+  transition: 0.5s background ease;
+}
+
+#barre a {
+  color: var(--text) !important;
+}
+
+#barre {
+  background-color: var(--backgroundBarre) !important;
+}
+
+.nav-link {
+  color: var(--text) !important;
+}
+
+.tend p {
+  color: var(--text) !important;
+}
+
+.texta {
+  color: var(--white) !important;
+}
+
+.oneartiste {
+  color: var(--text);
+}
+
+.btn-song {
+  color: var(--text);
+}
+
+#barre {
+  position: relative;
+  grid-area: barre;
+  background-color: #CBCBCB;
+  width: 100%;
+}
+
+#barre ul {
+  position: relative;
+  top: 20%;
+  left: 20%;
+}
+
+#barre li {
+  margin: 5% 0% 5% 0%;
+}
+
+#barre a {
+  text-decoration: none;
+  color: #616161;
+  font-size: 1.3rem;
+}
+
+#barre a:hover {
+  text-decoration: underline;
+}
+
+#audio {
+  position: relative;
+  grid-area: audio;
+  width: 100%;
+  height: 100%;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel {
+  background-color: #ABABAB;
+}
+
+/*# sourceMappingURL=main.css.map */
