@@ -116,6 +116,13 @@ li {
 
 #barre{
   background-color: var(--backgroundBarre) !important;
+  transition: 0.5s background ease;
+}
+
+#audio {
+  background-color: var(--background) !important;
+  transition: 0.5s background ease;
+
 }
 
 .nav-link{
