@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
 :root {
   --background: #494341;
   --text: #FFF;
@@ -176,3 +178,824 @@ audio::-webkit-media-controls-panel {
 }
 
 /*# sourceMappingURL=main.css.map */
+/*//////////////////////////////////////////////////////login///////////////////////////////////////////////////////*/
+
+  *{
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .message {
+    font-size: 0.7rem;
+    font-weight: normal;
+    color: red;
+  }
+
+  input {
+    /* border-radius: 50px; */
+    border: 1px solid #616161;
+    border-radius: 50px;
+    padding: 5% 2% 5% 5%;
+    margin-bottom: 7%;
+    background-color: #E8ECED;
+  }
+  input:focus {
+    outline-width: 0;
+  }
+
+  .logingeneral {
+    background-color: #E8ECED;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .loginimg img {
+    position: relative;
+    width: 35%;
+    left: 15%;
+    margin-top: 8%;
+  }
+
+  .divlogin {
+    position: relative;
+    right: 30%;
+    margin-top: 15%;
+  }
+
+  .loginform {
+    width: 150%;
+    height: 50%;
+    border: 2px solid #616161;
+    border-radius: 10px;
+    padding: 50% 0 0 50%;
+  }
+
+/*//////////////////////////////////////////////////////s'inscrire///////////////////////////////////////////////////////*/
+
+*{
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.message {
+  font-size: 0.7rem;
+  font-weight: normal;
+  color: red;
+}
+
+input {
+  /* border-radius: 50px; */
+  border: 1px solid #616161;
+  border-radius: 50px;
+  padding: 5% 2% 5% 5%;
+  margin-bottom: 7%;
+  background-color: #E8ECED;
+}
+input:focus {
+  outline-width: 0;
+}
+
+.logingeneral {
+  background-color: #E8ECED;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.loginimg img {
+  position: relative;
+  width: 35%;
+  left: 15%;
+  margin-top: 8%;
+}
+
+.divlogin {
+  position: relative;
+  right: 30%;
+  margin-top: 15%;
+}
+
+.loginform {
+  width: 150%;
+  height: 50%;
+  border: 2px solid #616161;
+  border-radius: 10px;
+  padding: 50% 0 30% 50%;
+}
+
+/*//////////////////////////////////////////////////////accueil///////////////////////////////////////////////////////*/
+
+  * {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .pageac {
+    width: 100%;
+    height: 93vh;
+    background-image: url(../../../img/fondupload.jpg);
+    background-size: cover;
+  }
+
+  .accueil {
+    position: relative;
+    width: 90%;
+    height: 95%;
+    display: grid;
+    grid-template-columns: 2.3fr 0.7fr;
+    grid-template-rows: 0.1fr 1.25fr 1.25fr;
+    grid-template-areas:  "vide vide"
+                          "playlist tendance"
+                          "artiste tendance";
+    grid-gap: 1.5rem;
+  }
+
+  #playlist {
+    position: relative;
+    grid-area: playlist;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29, 233, 182, .5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: row;
+  }
+
+  .play1 {
+    position: relative;
+    margin-top: 5%;
+    text-decoration: none;
+    color: #fff;
+
+  }
+
+  .textplay {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  #artiste {
+    position: relative;
+    grid-area: artiste;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(29, 233, 182, .5);
+    backdrop-filter: blur(4px);
+  }
+
+  .art {
+    position: relative;
+    width: 20%;
+    height: 65%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+
+  .imgart img{
+    width: 7rem;
+    height: 7rem;
+    background-color: purple;
+    border-radius: 100px;
+  }
+
+  .art p {
+    position: relative;
+    top: 10%;
+    color: #616161;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  #tendance {
+    position: relative;
+    grid-area: tendance;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(29, 233, 182, .5);
+    backdrop-filter: blur(4px);
+  }
+  #tendance h1 {
+    color: #616161;
+  }
+
+  .tend {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .tend img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .tend p {
+    margin-left: 5%;
+    color: #616161;
+  }
+
+/*//////////////////////////////////////////////////////profil///////////////////////////////////////////////////////*/
+
+  .stat_profil {
+    position: relative;
+    width: 100%;
+    height: 93vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:  "a b b b d"
+                          "a c c e ee"
+                          "f c c g g"
+                          "ii i h k ll"
+                          "j j j j l";
+    grid-gap: 1rem;
+  }
+
+  #profil1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: c;
+    width: 100%;
+    font-size: 4rem;
+  }
+  #profil2 {
+    position: relative;
+    top: 25%;
+    grid-area: a;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 100px;
+  }
+
+  #videe1 {
+    position: relative;
+    grid-area: b;
+    width: 100%;
+    background-image: url(../../../img/imgprofil/b.png);
+    background-size: cover;
+  }
+  #videe2 {
+    position: relative;
+    grid-area: d;
+    width: 100%;
+  }
+  #videe3 {
+    position: relative;
+    grid-area: e;
+    width: 100%;
+    background-color: #73ffba;
+  }
+  #videe4 {
+    position: relative;
+    grid-area: f;
+    width: 100%;
+    background-image: url(../../../img/imgprofil/f.png);
+    background-size: cover;
+  }
+  #videe5 {
+    position: relative;
+    grid-area: g;
+    width: 100%;
+    background-image: url(../../../img/imgprofil/g.png);
+    background-size: cover;
+  }
+  #videee6 {
+    position: relative;
+    grid-area: h;
+    width: 100%;
+    background-image: url(../../../img/imgprofil/h.png);
+    background-size: cover;
+  }
+  #videe7 {
+    position: relative;
+    grid-area: i;
+    width: 100%;
+    background-color: #73ffba;
+  }
+  #videe8 {
+    position: relative;
+    grid-area: j;
+    width: 100%;
+    background-image: url(../../../img/imgprofil/j.png);
+    background-size: cover;
+  }
+  #videe9 {
+    position: relative;
+    grid-area: k;
+    width: 100%;
+  }
+  #videe10 {
+    position: relative;
+    grid-area: l;
+    width: 100%;
+    background-color: #73ffba;
+  }
+
+/*//////////////////////////////////////////////////////genre///////////////////////////////////////////////////////*/
+
+    hr {
+      width: 90%;
+    }
+
+    .songs {
+      display: flex;
+      flex-direction: column;
+      height: 93vh;
+      overflow: auto;
+    }
+
+    .song {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      margin: 2% 0% 2% 0%;
+    }
+
+    .musique {
+      text-decoration: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 50%;
+    }
+    .musique img {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+
+/*//////////////////////////////////////////////////////like///////////////////////////////////////////////////////*/
+
+  hr {
+    width: 90%;
+  }
+
+  .songs {
+    display: flex;
+    flex-direction: column;
+    height: 93vh;
+    overflow: auto;
+  }
+
+  .song {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 2% 0% 2% 0%;
+  }
+
+  .musique {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+  }
+  .song img {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+/*//////////////////////////////////////////////////////parcourir///////////////////////////////////////////////////////*/
+
+  .gridgenre {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:  "a a b c d d"
+                          "a a b e f g"
+                          "a a b e h h"
+                          "i j b e h h"
+                          "i k b e h h"
+                          "i k m m h h"
+                          "l l m m h h"
+                          "l l m m n n";
+    grid-gap: 1rem;
+
+  }
+
+  .texta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  #genre1 {
+    position: relative;
+    grid-area: a;
+    background-image: url(../../../img/parcourir/rock.png);
+    background-size: cover;
+    width: 100%;
+  }
+  #genre2 {
+    position: relative;
+    grid-area: b;
+    background-image: url(../../../img/parcourir/rap.png);
+    background-size: cover;
+    width: 100%;
+  }
+  #genre3 {
+    position: relative;
+    grid-area: k;
+    background-image: url(../../../img/parcourir/k.png);
+    background-size: cover;
+    width: 100%;
+  }
+  #genre4 {
+    position: relative;
+    grid-area: h;
+    background-image: url(../../../img/parcourir/pop.png);
+    background-size: cover;
+    width: 100%;
+  }
+
+  #genre5 {
+    position: relative;
+    grid-area: l;
+    background-image: url(../../../img/parcourir/hippop.png);
+    background-size: cover;
+    width: 100%;
+  }
+  #genre6 {
+    position: relative;
+    grid-area: e;
+    background-image: url(../../../img/parcourir/soiree.png);
+    background-size: cover;
+    width: 100%;
+  }
+  #genre7 {
+    position: relative;
+    grid-area: d;
+    background-image: url(../../../img/parcourir/classique.png);
+    background-size: cover;
+    width: 100%;
+  }
+  #genre8 {
+    position: relative;
+    grid-area: m;
+    background-image: url(../../../img/parcourir/electro.png);
+    background-size: cover;
+    width: 100%;
+  }
+  #vide1 {
+    position: relative;
+    grid-area: c;
+    background-color: #1de9b6;
+    width: 100%;
+  }#vide2 {
+    position: relative;
+    grid-area: f;
+    background-color: #1de9b6;
+    width: 100%;
+  }#vide3 {
+    position: relative;
+    grid-area: g;
+    background-color: #1de9b6;
+    width: 100%;
+  }#vide4 {
+    position: relative;
+    grid-area: i;
+    background-color: #1de9b6;
+    width: 100%;
+  }#vide5 {
+    position: relative;
+    grid-area: j;
+    background-color: #1de9b6;
+    width: 100%;
+  }#vide6 {
+    position: relative;
+    grid-area: n;
+    background-color: #1de9b6;
+    width: 100%;
+  }
+
+  #genre1:hover {
+    background-color: #73ffba;
+    background-image: none;
+    color: #000;
+  }
+  #genre2:hover {
+    background-color: #73ffba;
+    background-image: none;
+    color: #000;
+  }
+  #genre3:hover {
+    background-color: #73ffba;
+    background-image: none;
+    color: #000;
+  }
+  #genre4:hover {
+    background-color: #73ffba;
+    background-image: none;
+    color: #000;
+  }
+  #genre5:hover {
+    background-color: #73ffba;
+    background-image: none;
+    color: #000;
+  }
+  #genre6:hover {
+    background-color: #73ffba;
+    background-image: none;
+    color: #000;
+  }
+  #genre7:hover {
+    background-color: #73ffba;
+    background-image: none;
+    color: #000;
+  }
+  #genre8:hover {
+    background-color: #73ffba;
+    background-image: none;
+    color: #000;
+  }
+  #vide1:hover {
+    background-image: url(../../../img/parcourir/c.png);
+    background-size: cover;
+  }
+  #vide2:hover {
+    background-image: url(../../../img/parcourir/f.png);
+    background-size: cover;
+  }
+  #vide3:hover {
+    background-image: url(../../../img/parcourir/g.png);
+    background-size: cover;
+  }
+  #vide4:hover {
+    background-image: url(../../../img/parcourir/i.png);
+    background-size: cover;
+  }
+  #vide5:hover {
+    background-image: url(../../../img/parcourir/j.png);
+    background-size: cover;
+  }
+  #vide6:hover {
+    background-image: url(../../../img/parcourir/autre.png);
+    background-size: cover;
+  }
+
+  /*//////////////////////////////////////////////////////artiste///////////////////////////////////////////////////////*/
+
+    .pageartist {
+      display: flex;
+      flex-direction: row;
+      height: 93vh;
+      justify-content: center;
+      overflow: auto;
+      flex-wrap: wrap;
+    }
+
+    .divartist {
+      text-decoration: none;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      margin: 50px 75px 50px 75px;
+    }
+
+    .divartist img {
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+    }
+
+    .oneartiste {
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+/*//////////////////////////////////////////////////////pageartiste///////////////////////////////////////////////////////*/
+
+
+    .profilartist {
+      width: 100%;
+      height: 93vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .divprofilartist {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+    }
+
+    .divprofilartist img {
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    .hrartist {
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .divmusique {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+    }
+
+    .tend {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .artistesong {
+      text-decoration: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 90%;
+    }
+
+/*//////////////////////////////////////////////////////tendance///////////////////////////////////////////////////////*/
+
+      .pagetendance {
+        width: 100%;
+        height: 93vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .divtendancesong {
+        width: 100%;
+        overflow: auto;
+      }
+
+      .tendancesong {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .atendance {
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .tendancesong img {
+        width: 75px;
+        height: 75px;
+        margin-right: 20px;
+      }
+
+/*//////////////////////////////////////////////////////upload///////////////////////////////////////////////////////*/
+
+  .upload-song {
+    width: 100%;
+    height: 93vh;
+    background-image: url(../../../img/fondupload.jpg);
+    background-size: cover;
+  }
+  .upform {
+    width: 100%;
+    height: 100%;
+    padding-top: 3%;
+  }
+
+  .form-upload{
+    width: 90%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:  "up1 up1"
+                          "up2 up3"
+                          "up4 up5"
+                          "up6 up6"
+                          "up7 up7"
+                          "up8 up8";
+
+    border: 1px solid #fff;
+    padding-bottom: 3%;
+    background-color: rgba(29, 233, 182, .05);
+    backdrop-filter: blur(4px);
+
+  }
+
+  .inputup {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    width: 50%;
+  }
+
+  .inputup::placeholder {
+    font-size: 1rem;
+    color: #fff;
+  }
+
+  #up1 {
+    position: relative;
+    grid-area: up1;
+  }
+  #up2 {
+    position: relative;
+    grid-area: up2;
+    margin-top: 10%;
+  }
+  #up3 {
+    position: relative;
+    grid-area: up3;
+  }
+  #up4 {
+    position: relative;
+    grid-area: up4;
+    margin-top: 10%;
+  }
+  #up5 {
+    position: relative;
+    grid-area: up5;
+    margin-top: 10%;
+  }
+  #up6 {
+    position: relative;
+    grid-area: up6;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+  }
+  #up6 input {
+    width: 100%;
+    height: 100%;
+  }
+  #up7 {
+    position: relative;
+    grid-area: up7;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+  }
+  #up7 input {
+    width: 100%;
+    height: 100%;
+  }
+  #up8 {
+    position: relative;
+    grid-area: up8;
+    height: 100%;
+  }
+  .buttonup {
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    margin-top: 25px;
+  }
+
+  .divup {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }

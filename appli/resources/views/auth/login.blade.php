@@ -3,39 +3,6 @@
 
 @section('content')
 
-@guest
-    @if (Route::has('login'))
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-        </li>
-    @endif
-
-    @if (Route::has('register'))
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-        </li>
-    @endif
-@else
-    <li class="nav-item dropdown">
-        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-            {{ Auth::user()->name }}
-        </a>
-
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{{ route('logout') }}"
-               onclick="event.preventDefault();
-                             document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-            </a>
-
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                @csrf
-            </form>
-        </div>
-    </li>
-@endguest
-
-
 <div class="logingeneral">
 
   <div class="loginimg">
@@ -82,63 +49,3 @@
   </div>
 </div>
 @endsection
-
-<style media="screen">
-
-  *{
-    margin: 0 auto;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-  }
-
-  .message {
-    font-size: 0.7rem;
-    font-weight: normal;
-    color: red;
-  }
-
-  input {
-    /* border-radius: 50px; */
-    border: 1px solid #616161;
-    border-radius: 50px;
-    padding: 5% 2% 5% 5%;
-    margin-bottom: 7%;
-    background-color: #E8ECED;
-  }
-  input:focus {
-    outline-width: 0;
-  }
-
-  .logingeneral {
-    background-color: #E8ECED;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .loginimg img {
-    position: relative;
-    width: 35%;
-    left: 15%;
-    margin-top: 8%;
-  }
-
-  .divlogin {
-    position: relative;
-    right: 30%;
-    margin-top: 15%;
-  }
-
-  .loginform {
-    width: 150%;
-    height: 50%;
-    border: 2px solid #616161;
-    border-radius: 10px;
-    padding: 50% 0 0 50%;
-  }
-
-
-
-
-</style>

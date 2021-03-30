@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
 :root {
   --background: #494341;
   --text: #FFF;
@@ -163,6 +165,10 @@ li {
 }
 #barre a:hover {
   text-decoration: underline;
+}
+
+.logingeneral {
+  background-color: var(--background);
 }
 
 

@@ -28,7 +28,7 @@
 
           @if (Route::has('register'))
               <li class="nav-item">
-                  <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                  <a class="nav-link" href="{{ route('register') }}">{{ __("S'inscrire") }}</a>
               </li>
           @endif
       @else
@@ -62,12 +62,3 @@
 
 <script src="/js/jquery.js"></script>
 <script src="/js/divers.js"></script>
-
-<style media="screen">
-
-
-
-
-
-
-</style>

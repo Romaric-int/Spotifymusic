@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,7 +24,8 @@ class DatabaseSeeder extends Seeder
              'artiste' => "Kaaris",
              'année' => "20XX",
              'image' => "/img/kaaris.jpg",
-             'votes' => 90000
+             'votes' => 90000,
+             'created_at' => Carbon::now(),
          ]);
 
          DB::table('songs')->insert([
@@ -33,7 +35,8 @@ class DatabaseSeeder extends Seeder
              'artiste' => "Alkapote",
              'année' => "2019",
              'image' => "/img/alkapote.jpg",
-             'votes' => 8000
+             'votes' => 8000,
+             'created_at' => Carbon::now(),
          ]);
 
          DB::table('songs')->insert([
@@ -43,7 +46,8 @@ class DatabaseSeeder extends Seeder
              'artiste' => "Nirvana",
              'année' => "1991",
              'image' => "/img/nirvana.jpg",
-             'votes' => 10050
+             'votes' => 10050,
+             'created_at' => Carbon::now(),
          ]);
 
          DB::table('songs')->insert([
@@ -53,7 +57,8 @@ class DatabaseSeeder extends Seeder
              'artiste' => "Queen",
              'année' => "1975",
              'image' => "/img/queen.jpg",
-             'votes' => 800
+             'votes' => 800,
+             'created_at' => Carbon::now(),
          ]);
          DB::table('users')->insert([
              'name' => 'Kaaris',
@@ -78,7 +83,7 @@ class DatabaseSeeder extends Seeder
 
          ]);
 
-        
+
          DB::table('artiste')->insert([
              'name' => 'Nirvana',
              'image' => "/img/avatar/nirvana.jpg",

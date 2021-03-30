@@ -100,7 +100,7 @@ class FirstController extends Controller
       $nowDate = Carbon::now();
       $endDate = Carbon::now()->subDays(7);
       $data = song::where('created_at','>',$endDate)
-                                            ->orderBy('votes')
+                                            ->orderBy('votes', 'DESC')
                                             ->take(10)
                                             ->get();
       return view("firstcontroller.tendance" , ["data" => $data]);
@@ -144,6 +144,7 @@ class FirstController extends Controller
 
 
     public function newsong(Request $request){
+      phpinfo();
       $name = $request->file('newsong')->hashName();
       $request->file('newsong')->move("uploads", $name);
       $name2 = $request->file('couverture')->hashName();
