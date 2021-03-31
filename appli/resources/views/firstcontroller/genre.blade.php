@@ -9,7 +9,7 @@
         <a href="#" data-file="{{$s->url}}" class="musique btn-song btn-song{{$s->id}}">
           <img src="{{$s->image}}" alt="">
           <p><b>{{ $s->title }}</b></p>
-          <a href="{{ $s->artiste }}">de {{ $s->artiste }}</a>
+          <p>de {{ $s->artiste }}</p>
         </a>
         <p>aimé par {{$s->votes}} personnes</p>
         @auth
